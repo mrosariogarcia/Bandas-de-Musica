@@ -1,0 +1,24 @@
+<!-- listadoBandas → Deberás utilizar esta vista para mostrar el listado completo de las bandas.
+Debes mostrar al menos el nombre e imagen de la banda.
+Al hacer click en alguna de las bandas debe redirigir al detalle de la misma. -->
+
+<!-- falta que se muestren las img -->
+<%- include('./partials/head') %>
+
+    <body>
+        <h1>Listado de Bandas</h1>
+        <ul>
+            <% for( let i=0; i < index.lista.length; i++ ) { %>
+                <li>
+                    <a href="/bandas/<%= index.lista[i].id %>">
+                    <img src="/<%= index.lista[i].cover %>" alt="<%= index.lista[i].nombre %>">
+
+                    <h2><%= index.lista[i].nombre %></h2>
+                </a>                   
+                </li>
+
+                <% } %>
+        </ul>
+        <%- include('./partials/footer') %>
+    </body>
+    

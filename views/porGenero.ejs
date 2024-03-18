@@ -1,0 +1,20 @@
+<!-- porGenero → Deberás utilizar esta vista para mostrar las bandas que pertenecen a un mismo género.
+Al clickear una banda de la lista por género, deberá redirigir al detalle de la misma.
+Validar que si no hubiese bandas de dicho género se muestre un mensaje ilustrativo.
+ -->
+ <%- include('./partials/head') %>
+
+<body>
+    <h1>Listado de Bandas del género: <%= generoEnviado %></h1>
+    <ul>
+        <% for (let i = 0; i < bandas.length; i++) { %>
+            <li>
+                <a href="/bandas/<%= bandas[i].id %>">
+                    <img src="/<%= bandas[i].cover %>" alt="<%= bandas[i].nombre %>">
+                    <h2><%= bandas[i].nombre %></h2>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+    <%- include('./partials/footer') %>
+</body>

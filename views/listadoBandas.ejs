@@ -6,6 +6,7 @@ Al hacer click en alguna de las bandas debe redirigir al detalle de la misma. --
 <%- include('./partials/head') %>
 
     <body>
+        <section>
         <h1>Listado de Bandas</h1>
         <ul>
             <% for( let i=0; i < index.lista.length; i++ ) { %>
@@ -19,6 +20,7 @@ Al hacer click en alguna de las bandas debe redirigir al detalle de la misma. --
 
                 <% } %>
         </ul>
+        </section>
         <%- include('./partials/footer') %>
     </body>
     

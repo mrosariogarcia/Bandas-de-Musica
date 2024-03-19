@@ -25,7 +25,7 @@ let bandasControllers = {
 
     },
     porGenero: function (req, res) {
-        let generoEnviado = req.params.id
+        let generoEnviado = req.params.genero
         console.log("Genero enviado:", generoEnviado);
 
         let generoBanda = []

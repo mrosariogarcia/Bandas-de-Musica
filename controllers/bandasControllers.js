@@ -20,7 +20,7 @@ let bandasControllers = {
             }
         }
         return res.render('idNovalido',{
-            mensaje:'no existe este id, intente nuevamente con otro.'})
+            mensaje:'No existe el id:'+ idEnviado +', intente nuevamente con otro.'})
         
 
     },
@@ -32,13 +32,15 @@ let bandasControllers = {
         for (let i = 0; i < bandas.lista.length; i++) {
             if (generoEnviado == bandas.lista[i].genero) {
                 generoBanda.push(bandas.lista[i])
+                return res.render('porGenero',{
+                    bandas: generoBanda,
+                    
+                    generoEnviado: generoEnviado,
+                })
             }
         }
-        return res.render('porGenero',{
-            bandas: generoBanda,
-            
-            generoEnviado: generoEnviado,
-        })
+        return res.render('idNovalido',{
+            mensaje:'No existe el genero:'+ generoEnviado +', intente nuevamente con otro.'})
      },
      
 
